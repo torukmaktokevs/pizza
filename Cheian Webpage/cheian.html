@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<script type="module">
+  import Chatbox from 'https://cdn.jsdelivr.net/npm/@chaindesk/embeds@latest/dist/chatbox/index.js';
+
+  const widget = await Chatbox.initBubble({
+    agentId: 'cm4819ffp0ifg2056dd6gwqua',
+    
+    // optional 
+    // If provided will create a contact for the user and link it to the conversation
+    contact: {
+      firstName: 'John',
+      lastName: 'Doe',
+      email: 'customer@email.com',
+      phoneNumber: '+33612345644',
+      userId: '42424242',
+    },
+    // optional
+    // Override initial messages
+    initialMessages: [
+      'Hello Georges how are you doing today?',
+      'How can I help you ?',
+    ],
+    // optional
+    // Provided context will be appended to the Agent system prompt
+    context: "The user you are talking to is John. Start by Greeting him by his name.",
+  });
+
+  // open the chat bubble
+  widget.open();
+
+  // close the chat bubble
+  widget.close()
+
+  // or 
+  widget.toggle()
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Call</title>
+    <link rel="stylesheet" href="cheiancss.css">
+</head>
+<body>
+    <header>
+        <h1>Pizza Call</h1>
+        <nav>
+            <ul>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="menu">
+            <h2>Our Menu</h2>
+            <div class="pizza-item">
+    <img src="https://ohsweetbasil.com/wp-content/uploads/how-to-make-authentic-margherita-pizza-at-home-recipe-4.jpg" alt="Margherita Pizza" class="pizza-image">
+    <div class="pizza-info">
+        <h3>Margherita Pizza</h3>
+        <p>Classic pizza with fresh mozzarella, tomatoes, and basil.</p>
+        <span>$12.99</span>
+    </div>
+    <div class="overlay">
+        <button onclick="showImage('https://preview.redd.it/0vk1616gj4p71.jpg?auto=webp&s=3eae7462f05288e5e324edf85be61a93b530477b')">Order Now</button>
+    </div>
+</div>
+<div class="pizza-item">
+    <img src="https://thelionsroarmhsn.com/wp-content/uploads/2015/04/Pepperoni_1.jpg" alt="Pepperoni Pizza" class="pizza-image">
+    <div class="pizza-info">
+        <h3>Pepperoni Pizza</h3>
+        <p>Loaded with pepperoni and mozzarella cheese.</p>
+        <span>$14.99</span>
+    </div>
+    <div class="overlay">
+        <button onclick="showImage('https://s3-prod.adage.com/s3fs-public/styles/800x600/public/20200904_pornhubLaborDay_3x2_0.jpg', this)">Order Now</button>
+    </div>
+</div>
+<div class="pizza-item">
+    <img src="https://images.saymedia-content.com/.image/t_share/MTc0NDI4NDg3NDMwOTA3NTI2/how-to-make-delicious-homemade-pizza.jpg" alt="Veggie Pizza" class="pizza-image">
+    <div class="pizza-info">
+        <h3>Veggie Pizza</h3>
+        <p>Fresh vegetables with a blend of cheeses.</p>
+        <span>$13.99</span>
+    </div>
+    <div class="overlay">
+        <button onclick="showImage('https://2.bp.blogspot.com/-VNtnbHGMywk/V_jcFgS25YI/AAAAAAAAL60/-IdJxcmMkjocMlV6zshhJ6YiGOk12AT_wCLcB/s1600/wl01.jpg', this)">Order Now</button>
+    </div>
+</div>
+<div class="pizza-item">
+    <img src="https://www.kitchenkonfidence.com/wp-content/uploads/2019/09/BBQ-Chicken-Pizza-4.jpg" alt="BBQ Chicken Pizza" class="pizza-image">
+    <div class="pizza-info">
+        <h3>BBQ Chicken Pizza</h3>
+        <p>Grilled chicken with BBQ sauce and red onions.</p>
+        <span>$15.99</span>
+    </div>
+    <div class="overlay">
+    <button id="orderButton" onclick="showImage('44bf4ccc-1bd1-40d9-80ab-05cd84b348c2.jpg')">Order Now</button>
+</div>
+</div>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>At Pizza Call, we believe in using only the freshest ingredients to create the best pizzas. Our recipes are crafted with love and passion for pizza!<br> We believe that the faster the pizza, the faster you can eat. We believe that in every pizza call is a person who's hungry for pizza.<br>
+ Tra na magpizza, Tra na sa Pizza Call!</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Email: Pizzakadito@gmail.com</p>
+            <p>Phone: (123) 456-7890</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Pizza Call. All Rights Reserved.</p>
+    </footer>
+<div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

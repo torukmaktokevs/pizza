@@ -1,0 +1,138 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://png.pngtree.com/back_origin_pic/05/16/24/acc79ee1b877b2854701801de875953d.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+header {
+    background-image: url('https://news.kisspr.com/system/posts/images/000/017/722/original/pexels-narda-yescas-1566837.jpg');
+    background-size: cover; /* Cover the entire header */
+    background-position: center; /* Center the background image */
+    color: #ff6347; /* Changed to white for better contrast */
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px; /* Adjusted margin for smaller spacing */
+}
+
+nav ul li a {
+    color: white; /* Changed font color to black */
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+h2 {
+    color: #ff6347; /* Tomato color */
+}
+
+#about p, 
+#contact p {
+    color: white; /* Set the font color to white */
+}
+
+.pizza-item {
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px; /* Adjusted margin for compactness */
+    overflow: hidden; /* Ensure overlay doesn't overflow */
+    transition: transform 0.3s;
+    width: 150px; /* Increased width for larger menu items */
+    display: inline-block; /* Align items horizontally */
+}
+
+.pizza-item:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.pizza-image {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.pizza-info {
+    padding: 15px; /* Increased padding for a more spacious layout */
+    z-index: 1; /* Ensure content is above overlay */
+    font-size: 1em; /* Increased font size for better readability */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s;
+}
+
+.pizza-item:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+button {
+    background-color: #ff6347; /* Tomato color */
+    color: white;
+    border: none;
+    padding: 10px 20px; /* Adjusted padding for button */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+button:hover {
+    background-color: #e5533d; /* Darker tomato color on hover */
+}
+
+.order-image {
+    display: none; /* Initially hidden */
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 10px; /* Add some space above the image */
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white; /*
